@@ -21,7 +21,7 @@ int main () {
     x.allocate(pb, "x");
     max.allocate(pb, "max");
     
-    pb.val(max)= FieldT(60);
+    pb.val(max)= 60;
 
     comparison_gadget<FieldT> cmp(pb, 10, x, max, less, less_or_eq, "cmp");
     cmp.generate_r1cs_constraints();
@@ -33,7 +33,7 @@ int main () {
     const r1cs_gg_ppzksnark_keypair<default_r1cs_gg_ppzksnark_pp> keypair = r1cs_gg_ppzksnark_generator<default_r1cs_gg_ppzksnark_pp>(constraint_system);
 
     // Add witness values
-    pb.val(x) = FieldT(2); // secret
+    pb.val(x) = 18; // secret
     cmp.generate_r1cs_witness();
 
     // generate proof

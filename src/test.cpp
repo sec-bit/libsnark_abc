@@ -53,9 +53,10 @@ int main () {
     // generate keypair
     const r1cs_gg_ppzksnark_keypair<default_r1cs_gg_ppzksnark_pp> keypair = r1cs_gg_ppzksnark_generator<default_r1cs_gg_ppzksnark_pp>(constraint_system);
 
-    // Add witness values
-    pb.val(x) = 3;
+    // Add public input and witness values
     pb.val(out) = 35;
+
+    pb.val(x) = 3;
     pb.val(sym_1) = 9;
     pb.val(y) = 27;
     pb.val(sym_2) = 30;
