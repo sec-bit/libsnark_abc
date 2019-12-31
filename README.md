@@ -1,6 +1,6 @@
 # libsnark ABC
 
-Minimal example to use libsnark.
+Minimal examples to use libsnark.
 
 ## Reference
 
