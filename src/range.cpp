@@ -20,6 +20,8 @@ int main () {
 
     x.allocate(pb, "x");
     max.allocate(pb, "max");
+    less.allocate(pb, "less"); // must have
+    less_or_eq.allocate(pb, "less_or_eq");
     
     pb.val(max)= 60;
 
